@@ -65,7 +65,7 @@ button:focus-visible {
 }
 
 
-/* --- Home Component Styles (Pink Version of the Blue Design) --- */
+
 .home-container {
     display: flex;
     flex-direction: column;

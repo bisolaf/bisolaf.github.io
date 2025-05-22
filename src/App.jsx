@@ -5,9 +5,10 @@ import Planner from './travelplanner';
 import Contact from './contactme';
 import About from './aboutme.';
 import Checkout from './checkout';
-import './App.css'; // Correct way to import CSS
+import Snake from './snake';
+import Database from './database';
+import './App.css'; 
 
-// Home component definition
 function Home() {
   const navigate = useNavigate();
   const handleSelectChange = (event) => {
@@ -18,23 +19,23 @@ function Home() {
   };
 
   return (
-    <div className="home-container"> {/* Main container for the Home page, sets blue background */}
-      <nav className="top-nav"> {/* Top fixed navigation bar */}
-        <span className="nav-name">Adedoyin (Bisola) Folarin</span> {/* Your name on the left */}
-        <div className="nav-links"> {/* Navigation links on the right */}
+    <div className="home-container"> 
+      <nav className="top-nav"> 
+        <span className="nav-name">Adedoyin (Bisola) Folarin</span> 
+        <div className="nav-links"> 
           <a href="/projects">Projects</a>
-          <a href="https://github.com/bisolaf" target="_blank" rel="noopener noreferrer">Git</a> {/* Example GitHub link */}
-          <a href="https://www.linkedin.com/in/bisola-folarin-3a6051231/" target="_blank" rel="noopener noreferrer">LinkedIn</a> {/* Example LinkedIn link */}
+          <a href="https://github.com/bisolaf" target="_blank" rel="noopener noreferrer">Git</a> 
+          <a href="https://www.linkedin.com/in/bisola-folarin-3a6051231/" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
           <a href="/contact">Contact</a>
         </div>
       </nav>
 
-      <div className="hero-section"> {/* The main two-column layout section */}
-        <div className="hero-left"> {/* Left column for image and camera icon */}
+      <div className="hero-section"> 
+        <div className="hero-left"> 
           <img
-            src='/Profile.jpg' // Your main profile image
+            src='/Profile.jpg' 
             alt="Adedoyin Bisola Folarin Profile"
-            className="hero-profile-image" // Class for large circular image
+            className="hero-profile-image" 
           />
         </div>
         <div className="hero-right">
@@ -44,7 +45,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Intro Section - "I was born and raised..." text */}
+      
       <div className="intro-section">
         <h2 className="intro-heading">About Me</h2>
         <p className="intro-text">I am from Lagos, Nigeria and went to High School in Dilijan, Armenia.</p>
@@ -53,7 +54,7 @@ function Home() {
   );
 }
 
-// Main App component - this is the one that should be exported
+
 function App() {
   return (
     <Routes>
@@ -64,7 +65,8 @@ function App() {
       <Route path="/decision" element={<Decision />} />
       <Route path="/planner" element={<Planner />} />
       <Route path="/checkout" element={<Checkout />} />
-      {/* Add routes for any new nav links here if they are new components */}
+      <Route path="/snake" element={<Snake />} />
+      <Route path="/database" element={<Database />} />
       {/* <Route path="/media" element={<Media />} /> */}
       {/* <Route path="/resume" element={<Resume />} /> */}
       {/* <Route path="/resources" element={<Resources />} /> */}
