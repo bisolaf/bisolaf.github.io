@@ -1,4 +1,5 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
 import Projects from './mywork';
 import Decision from './decisiontree';
 import Planner from './travelplanner';
