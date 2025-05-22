@@ -1,0 +1,580 @@
+/* --- GLOBAL / ROOT STYLES (FROM former index.css content) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #333; /* Default dark text */
+  background-color: #fce4ec; /* Default light pink background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* Global Link Styles */
+a {
+  font-weight: 500;
+  color: #d1a7b0; /* A slightly darker pink for links */
+  text-decoration: inherit;
+}
+a:hover {
+  color: #ff69b4; /* A brighter pink on hover for links */
+}
+
+/* Global Heading 1 Styles */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #333; /* Default h1 color */
+}
+
+/* Global Button Styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+button:hover {
+  background-color: #e0e0e0;
+  border-color: transparent;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto #d1a7b0;
+}
+
+
+/* --- Home Component Styles (Pink Version of the Blue Design) --- */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fce4ec; /* Overall light pink background */
+    color: #333; /* Dark text color for contrast */
+    overflow-x: hidden;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(255, 230, 235, 0.9); /* Lighter pink with transparency */
+    backdrop-filter: blur(5px);
+}
+
+.nav-name {
+    font-weight: bold;
+    color: #333; /* Dark text for contrast */
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links a {
+    color: #333; /* Dark text for contrast */
+    text-decoration: none;
+    margin-left: 30px;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links a:hover {
+    color: #d1a7b0; /* Slightly darker pink on hover */
+}
+
+/* Hero Section (Main image and text area) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 120px 50px 80px 50px; /* Adjust top padding to account for fixed nav */
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffeef2; /* A slightly lighter, soft pink for this section */
+    color: #333; /* Ensure text is dark on this pink background */
+}
+
+.hero-left {
+    position: relative;
+    flex-shrink: 0;
+    padding-left: 20px;
+}
+
+.hero-profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(0, 0, 0, 0.1); /* Subtle dark border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove or comment out camera icon if not using */
+/*
+.camera-icon-wrapper {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f0e68c;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.camera-icon {
+    width: 30px;
+    height: 30px;
+    filter: none;
+}
+*/
+
+.hero-right {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+    /* No explicit background-color here; it will inherit from .hero-section */
+}
+
+.hero-main-heading {
+    font-size: 1.5em;
+    color: #333; /* Dark text for readability on the pink background */
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 80px 50px;
+    background-color: #fce4ec; /* The light pink background below the hero section */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    color: #333; /* Dark text */
+}
+
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.intro-heading {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    background-color: #fce4ec;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Add a class to your main container for this component */
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers children horizontally */
+  min-height: 100vh;
+  background-color: #fce4ec; /* Your pink background */
+  padding: 20px;
+  box-sizing: border-box;
+  color: #333;
+}
+.horizontal-images-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* For the button's wrapper */
+.button-center-wrapper {
+  text-align: center; /* Centers inline-block children */
+  width: 100%; /* Ensure it spans full width to apply text-align */
+  margin-top: 20px; /* Adjust spacing as needed */
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+.horizontal-button {
+  background-color: #f0e68c; /* Beige button */
+  color: #333;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0 0.2s ease;
+  text-decoration: none; /* Important for <a> tag */
+  /* Remove display: inline-block; as it will be handled by the wrapper */
+  /* Remove margin: 20px; if you are using margin-top/bottom on wrapper */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  display: block; /* Make it a block element to use margin: auto */
+  margin: 20px auto; /* Center horizontally using auto margins */
+}
+
+.horizontal-button:hover {
+  background-color: #e0d08c;
+  transform: translateY(-3px);
+}
+.horizontal-image {
+  width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Projects Component Styling (Updated for full-screen pink and centered black buttons) --- */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #fce4ec; /* Light pink background */
+  padding: 20px;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.projects-heading {
+  color: black;
+  font-size: 3em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.project-buttons-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.project-button {
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-button:hover {
+  background-color: #333;
+}
+
+
+/* Travel Planner Component Styles (Adjusted for consistency) */
+.travel-planner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #fce4ec; /* Light pink background */
+    padding: 40px 20px;
+    box-sizing: border-box;
+    color: #333;
+    text-align: center;
+}
+
+.travel-planner-heading {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.travel-planner-image {
+    width: 700px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.travel-planner-description {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.repo-button {
+    background-color: #f0e68c; /* Beige button */
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.contact-profile-image {
+  width: 250px; /* Adjust size as needed */
+  height: 250px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures image covers the circle */
+  border: 5px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Nice shadow */
+}
+.contact-content {
+  display: flex;
+  flex-direction: column; /* Stack image and button vertically within this container */
+  align-items: center;    /* Center image and button horizontally */
+  gap: 30px;              /* Space between the image and the button */
+  /* You can add max-width if you want to limit the content's horizontal spread */
+}
+.contact-button {
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.repo-button:hover {
+    background-color: #e0d08c;
+    transform: translateY(-3px);
+}
+
+
+.travel-details-placeholder {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fffaf0; /* Off-white/light beige for internal boxes */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+.travel-details-placeholder h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.travel-details-placeholder p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.package-info {
+    background-color: #ffeef2;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.diagram-node {
+    background-color: #f0e68c;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.package-offer {
+    font-style: italic;
+    color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        padding: 15px 20px;
+        align-items: flex-start;
+        background-color: rgba(255, 230, 235, 0.95);
+    }
+    .nav-links {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 100px 20px 50px 20px;
+        gap: 30px;
+    }
+    .hero-profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    .hero-profile {
+      width: 100px;
+      height: 200px;
+  }
+  /* --- Contact Component Styles --- */
+.contact-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;    /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  min-height: 100vh;      /* Ensure it takes full viewport height */
+  width: 100vw;           /* Ensure it takes full viewport width */
+  background-color: #fce4ec; /* Light pink background */
+  padding: 20px;          /* Add padding around the content */
+  box-sizing: border-box; /* Include padding in element's total size */
+  color: #333;            /* Default text color */
+}
+
+.contact-heading {
+  font-size: 3em;
+  color: #333; /* Dark text */
+  margin-bottom: 40px; /* Space between heading and content */
+  text-align: center;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column; /* Stack image and button vertically within this container */
+  align-items: center;    /* Center image and button horizontally */
+  gap: 30px;              /* Space between the image and the button */
+  /* You can add max-width if you want to limit the content's horizontal spread */
+}
+
+
+
+/* The .project-button style (black background, white text)
+   is already defined globally or in your Projects section,
+   so it will apply here automatically. */
+
+/* Optional: If you want to adjust the email link's behavior */
+.contact-email-link {
+  text-decoration: none; /* Remove underline from the email link */
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 2.5em;
+  }
+  .contact-profile-image {
+    width: 200px;
+    height: 200px;
+  }
+  .contact-content {
+    gap: 20px; /* Reduce gap on smaller screens */
+  }
+}
+
+/* Ensure all your other component styles (Home, Projects, Travel Planner, etc.)
+   are kept in App.css as well. */
+    .hero-right {
+        text-align: center;
+    }
+    .hero-main-heading {
+        font-size: 1.8em;
+    }
+    .intro-section {
+        padding: 60px 20px;
+    }
+
+    /* Projects Component Media Queries */
+    @media (max-width: 768px) {
+      .projects-container {
+        padding: 60px 20px;
+      }
+
+      .projects-heading {
+        font-size: 2.5em;
+      }
+    }
+
+    /* Travel Planner Component Media Queries */
+    .travel-planner-image {
+        width: 250px;
+    }
+    .travel-planner-heading {
+        font-size: 2.5em;
+    }
+    .travel-details-placeholder {
+        width: 95%;
+        padding: 20px;
+    }
+}
