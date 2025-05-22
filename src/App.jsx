@@ -24,7 +24,7 @@ function Home() {
         <div className="nav-links"> {/* Navigation links on the right */}
           <a href="/projects">Projects</a>
           <a href="https://github.com/bisolaf" target="_blank" rel="noopener noreferrer">Git</a> {/* Example GitHub link */}
-          <a href="https://linkedin.com/in/bisolafolarin" target="_blank" rel="noopener noreferrer">LinkedIn</a> {/* Example LinkedIn link */}
+          <a href="https://www.linkedin.com/in/bisola-folarin-3a6051231/" target="_blank" rel="noopener noreferrer">LinkedIn</a> {/* Example LinkedIn link */}
           <a href="/contact">Contact</a>
         </div>
       </nav>
