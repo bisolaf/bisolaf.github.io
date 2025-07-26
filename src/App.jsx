@@ -34,7 +34,7 @@ function Home() {
       <div className="hero-section"> 
         <div className="hero-left"> 
           <img
-            src='/Profile.png' 
+            src='Profile.png' 
             alt="Adedoyin Bisola Folarin Profile"
             className="hero-profile-image" 
           />

@@ -12,7 +12,7 @@ function Projects() {
         <div className="projects-container"> 
             <div className="contact-content"> 
             <img
-              src='/Profile.jpg' 
+              src='Profile.png' 
               alt="Adedoyin Bisola Folarin Profile"
               className="contact-profile-image" 
             />
