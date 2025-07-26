@@ -7,6 +7,7 @@ import About from './aboutme.';
 import Checkout from './checkout';
 import Snake from './snake';
 import Database from './database';
+import Tester from './vuln-tester';
 import './App.css'; 
 
 function Home() {
@@ -33,7 +34,7 @@ function Home() {
       <div className="hero-section"> 
         <div className="hero-left"> 
           <img
-            src='/Profile.jpg' 
+            src='/Profile.png' 
             alt="Adedoyin Bisola Folarin Profile"
             className="hero-profile-image" 
           />
@@ -67,6 +68,7 @@ function App() {
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/snake" element={<Snake />} />
       <Route path="/database" element={<Database />} />
+      <Route path="/tester" element={<Tester />} />
       {/* <Route path="/media" element={<Media />} /> */}
       {/* <Route path="/resume" element={<Resume />} /> */}
       {/* <Route path="/resources" element={<Resources />} /> */}

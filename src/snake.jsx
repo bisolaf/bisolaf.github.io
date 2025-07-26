@@ -7,7 +7,7 @@ function Snake() {
             <img src='/snake2.png' alt="Snake 2" className="horizontal-image" />
             <img src='/snake3.png' alt="Snake 3" className="horizontal-image" />
         </div>
-          <p className="horizontal-description">Play Snake</p>
+          <p className="horizontal-description">A Systems based approach to the Popular game, Snake. This was created in C and the application created focuses on a backend rendition which is pictured above!</p>
           <div className="button-center-wrapper"> 
             <a href="https://github.com/bisolaf/Snake" target="_blank" rel="noopener noreferrer">
              <button className="horizontal-button">GitHub Repo</button>

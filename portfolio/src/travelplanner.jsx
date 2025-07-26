@@ -8,7 +8,7 @@ function Planner() {
                 className="travel-planner-image"
             />
             <p className="travel-planner-description">
-                This uses the BFS, DFS and Dijkstra algorithms to choose best routes for travel. It was developed in Java. The image above shows a potential utilization of the application in planning routes that leverage distance/cost comparisons.
+                This uses the BFS, DFS and Dijkstra algorithms to choose best routes for travel
             </p>
             <a href="https://github.com/bisolaf/Travel-Planner" target="_blank" rel="noopener noreferrer">
                 <button className="repo-button">GitHub Repo</button>

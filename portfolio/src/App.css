@@ -39,15 +39,7 @@ a:hover {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: #333; 
-}
-h2 {
-  font-size: 1.5em;
-  /* line-height: 1.1; */
-  color: #333;
-  width: 70%; 
-  margin: 0 auto; 
-  text-align: center;
+  color: #333; /* Default h1 color */
 }
 
 /* Global Button Styles */
@@ -73,7 +65,7 @@ button:focus-visible {
 }
 
 
-
+/* --- Home Component Styles (Pink Version of the Blue Design) --- */
 .home-container {
     display: flex;
     flex-direction: column;
@@ -171,15 +163,6 @@ button:focus-visible {
     filter: none;
 }
 */
-
-.horizontal-description {
-  color: #333;
-  font-size: 1.1em;
-  margin-bottom: 30px;
-  max-width: 800px;
-  line-height: 1.6;
-  text-align: center;
-}
 
 .hero-right {
     flex: 1;
